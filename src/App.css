@@ -1,7 +1,3 @@
-* {
-  font-size: sans-serif;
-}
-
 .container {
   display: flex;
   flex-direction: column;
