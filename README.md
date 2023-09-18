@@ -13,7 +13,7 @@ Follow these steps to install and run the project on your computer:
      
   2. Open a terminal and navigate to the project directory:
   ```
-  cd Cg-Styles-Challenge
+  cd CG-Water-Jug-Challenge
   ```
      
   3. Install the project dependencies by running the following command:
