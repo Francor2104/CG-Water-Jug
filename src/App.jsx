@@ -2,9 +2,9 @@ import  { useState } from 'react';
 import './App.css';
 
 const WaterJugSolver = () => {
-  const [jugACapacity, setJugACapacity] = useState(5);
-  const [jugBCapacity, setJugBCapacity] = useState(3);
-  const [requiredAmount, setRequiredAmount] = useState(4);
+  const [jugACapacity, setJugACapacity] = useState(0);
+  const [jugBCapacity, setJugBCapacity] = useState(0);
+  const [requiredAmount, setRequiredAmount] = useState(0);
 
   const [steps, setSteps] = useState([]);
 
