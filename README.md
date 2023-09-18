@@ -9,7 +9,7 @@ Make sure you have the following prerequisites:
 ## Installation
 Follow these steps to install and run the project on your computer:
 
-  1. Clone this repository to your local machine. You can do this by downloading the ZIP file or using GIt in your terminal: https://github.com/Francor2104/CG-Styles-Challenge.git
+  1. Clone this repository to your local machine. You can do this by downloading the ZIP file or using GIt in your terminal: [https://github.com/Francor2104/CG-Water-Jug.git](https://github.com/Francor2104/CG-Water-Jug.git)
      
   2. Open a terminal and navigate to the project directory:
   ```
