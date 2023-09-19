@@ -67,6 +67,10 @@ li {
   cursor: pointer;
 }
 
+button:disabled {
+  display: none;
+}
+
 li:hover {
   background-color: #f2f2f2;
 }

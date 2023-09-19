@@ -8,6 +8,8 @@ const WaterJugSolver = () => {
 
   const [steps, setSteps] = useState([]);
 
+  const clamp = (value, max, min = 0) => Math.min(Math.max(value, min), max);
+
   const solveWaterJugChallenge = () => {
     const breadthFirstSearch = () => {
       const queue = [];
@@ -51,8 +53,10 @@ const WaterJugSolver = () => {
   };
 
    const Verifier = (e,callback) => {
-    const value = Number(e.target.value);
-    if (!isNaN(value) && Number.isInteger(value) && value) callback(value);
+     var value = e.target.value;
+     if (!value) return callback('');
+    value = clamp(value, 10000);
+    callback(value);
   }
 
   const handleJugACapacityChange = (e) => Verifier(e, setJugACapacity) 
@@ -60,6 +64,8 @@ const WaterJugSolver = () => {
   const handleJugBCapacityChange = (e) => Verifier(e, setJugBCapacity) ;
 
   const handleRequiredAmountChange = (e) => Verifier(e, setRequiredAmount) ;
+
+  const isButtonDisabled = !jugACapacity || !jugBCapacity || !requiredAmount
 
   return (
     <div className="container">
@@ -70,6 +76,7 @@ const WaterJugSolver = () => {
           type="number"
           step="1"
           min="1"
+          max="10000"
           value={jugACapacity}
           onChange={handleJugACapacityChange}
         />
@@ -80,6 +87,7 @@ const WaterJugSolver = () => {
           type="number"
           step="1"
           min="1"
+          max="10000"
           value={jugBCapacity}
           onChange={handleJugBCapacityChange}
         />
@@ -89,12 +97,13 @@ const WaterJugSolver = () => {
         <input
           type="number"
           step="1"
+          max="10000"
           min="1"
           value={requiredAmount}
           onChange={handleRequiredAmountChange}
         />
       </div>
-      <button className="solve-button" onClick={solveWaterJugChallenge}>
+      <button className="solve-button" onClick={solveWaterJugChallenge} disabled={isButtonDisabled}>
         Solve
       </button>
       <h2>Step by step:</h2>
